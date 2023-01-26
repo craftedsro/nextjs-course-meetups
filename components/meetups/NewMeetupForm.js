@@ -2,10 +2,10 @@ import React, { useRef } from "react";
 import { Box, Button, FormControl, TextField } from "@mui/material";
 
 const NewMeetupForm = (props) => {
-  const titleRef = useRef("");
-  const imageRef = useRef("");
-  const addressRef = useRef("");
-  const descriptionRef = useRef("");
+  const titleRef = useRef(undefined);
+  const imageRef = useRef(undefined);
+  const addressRef = useRef(undefined);
+  const descriptionRef = useRef(undefined);
 
   const submitHandler = (event) => {
     event.preventDefault();

@@ -1,6 +1,6 @@
 import MetaHead from "../components/ui/MetaHead";
 import MeetupList from "../components/meetups/MeetupList";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { GetMeetupsCollection } from "../util/db";
 
 const HomePage = (props) => {
@@ -12,7 +12,13 @@ const HomePage = (props) => {
       <MetaHead title={title} description={description} />
 
       <Box component="section">
-        <h1>{title}</h1>
+        <Typography
+          variant="h4"
+          color="text.primary"
+          style={{ textAlign: "center" }}
+        >
+          {title}
+        </Typography>
         <MeetupList meetups={props.meetups} />
       </Box>
     </>

@@ -1,6 +1,6 @@
 import NewMeetupForm from "../components/meetups/NewMeetupForm";
 import MetaHead from "../components/ui/MetaHead";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 
 const NewMeetupPage = () => {
@@ -20,14 +20,20 @@ const NewMeetupPage = () => {
 
     console.log(result);
 
-    router.push("/");
+    await router.push("/");
   };
 
   return (
     <>
       <MetaHead title={title} description={description} />
       <Box component="section">
-        <h1>{title}</h1>
+        <Typography
+          variant="h4"
+          color="text.primary"
+          style={{ textAlign: "center" }}
+        >
+          {title}
+        </Typography>
         <NewMeetupForm onAddMeetup={addMeetupHandler} />
       </Box>
     </>

@@ -1,8 +1,9 @@
 import MeetupItem from "./MeetupItem";
+import { List } from "@mui/material";
 
 const MeetupList = (props) => {
   return (
-    <ul>
+    <List>
       {props.meetups.map((meetup) => (
         <MeetupItem
           key={meetup.id}
@@ -12,7 +13,7 @@ const MeetupList = (props) => {
           address={meetup.address}
         />
       ))}
-    </ul>
+    </List>
   );
 };
 

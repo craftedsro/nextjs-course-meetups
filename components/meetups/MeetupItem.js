@@ -4,6 +4,7 @@ import {
   Card,
   CardActions,
   CardContent,
+  ListItem,
   Typography,
 } from "@mui/material";
 import { useRouter } from "next/router";
@@ -17,7 +18,7 @@ const MeetupItem = (props) => {
   };
 
   return (
-    <li key={id}>
+    <ListItem key={id}>
       <Card sx={{ maxWidth: 600 }} style={{ marginBottom: 50 }}>
         <Image src={image} alt={title} width={600} height={300} />
 
@@ -35,7 +36,7 @@ const MeetupItem = (props) => {
           </Button>
         </CardActions>
       </Card>
-    </li>
+    </ListItem>
   );
 };
 
